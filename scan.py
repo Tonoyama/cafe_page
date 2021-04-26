@@ -14,6 +14,8 @@ df_t = now_t.strftime('%Y-%m-%d %H:%M')
 #count = 0
 #for i in devices:
 #    addr = device.addr
+#    hash_str = str(df_t) + addr
+#    hash_str = hashlib.sha256(hash_str.encode()).hexdigest()
 #    count += 1
 
 addr = "1a:2b:3c:46:2b:3c"
