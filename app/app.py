@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/", methods=['POST'])
+def info():
+    global count, addr
+    count = str(request.form['count'])
+    addr = str(request.form['addr'])
+    return render_template('index.html', count=count, addr=addr)
+
+@app.route("/2", methods=['POST'])
+def info2():
+    global count2, addr2
+    count2 = str(request.form['count2'])
+    addr2 = str(request.form['addr2'])
+    return render_template('index.html', count2=count2, addr2=addr2)
+
+@app.route("/", methods=["GET"])
+def view():
+    return render_template('index.html', count=count, count2=count2)
+
+
+if __name__ == "__main__":
+    app.run()
