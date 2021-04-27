@@ -12,7 +12,15 @@
         <h1 class="text-muted">デバイス数:{{count}}</h1>
     </form>
     <div>
-        <img src="../static/images/crowded.png"width="400" height="200">
+        {% if count %}
+		    {% if count>60 %}
+                <img src="../static/images/empty.png"width="400" height="200">
+		    {% elif count<=60 %}
+		        <img src="../static/images/little_empty.png"width="400" height="200">
+		    {% else %}
+		        <img src="../static/images/crowded.png"width="400" height="200">
+		    {% endif %}
+	    {% endif %}
     </div>
     <div>
         <details>
