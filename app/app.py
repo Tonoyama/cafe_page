@@ -17,6 +17,13 @@ def info2():
     addr2 = str(request.form['addr2'])
     return render_template('index.html', count2=count2, addr2=addr2)
 
+@app.route("/3", methods=['POST'])
+def info3():
+    global count3, addr3
+    count3 = str(request.form['count3'])
+    addr3 = str(request.form['addr3'])
+    return render_template('index.html', count3=count3, addr3=addr3)
+
 @app.route("/", methods=["GET"])
 def view():
     return render_template('index.html', count=count, count2=count2)
