@@ -5,28 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>混雑度チェッカー</title><!--titleはタブの名前(Webページのタイトル)-->
     <!-- cssの読み込み -->
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
 </head>
 <body>
     <form method="post">
         <h1 class="text-muted">デバイス数:{{count}}</h1>
     </form>
     <div>
-        {% if count %}
-		    {% if count>60 %}
-                <img src="../static/images/empty.png"width="400" height="200">
-		    {% elif count<=60 %}
-		        <img src="../static/images/little_empty.png"width="400" height="200">
-		    {% else %}
-		        <img src="../static/images/crowded.png"width="400" height="200">
-		    {% endif %}
-	    {% endif %}
-    </div>
-    <div>
         <details>
-            <summary>マップ</summary>
+            <summary><i class="fas fa-map-marked-alt"></i> マップ</summary>
             <div>
-                <img src="../static/images/crowded.png"width="400" height="200">
+                <img src="../static/images/little_empty.png">
             </div>
         </details>
     </div>
@@ -36,13 +27,13 @@
         <h1 class="text-muted">デバイス数:{{count2}}</h1>
     </form>
     <div>
-        <img src="../static/images/crowded.png"width="400" height="200">
+        <img src="../static/images/empty.png">
     </div>
     <div>
         <details>
-            <summary>マップ</summary>
+            <summary><i class="fas fa-map-marked-alt"></i> マップ</summary>
             <div>
-                <img src="../static/images/crowded.png"width="400" height="200">
+                <img src="../static/images/crowded.png" secrlset="image-sp.jpg 480w, image-tablet.jpg 640w, image-pc 960w">
             </div>
         </details>
     </div>
