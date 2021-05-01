@@ -28,12 +28,6 @@ def info3():
 @app.route("/", methods=["GET"])
 def view():
     counted = int(count)+int(count2)
-    if counted < 50:
-        counted == "1"
-    elif counted < 60:
-        counted == "2"
-    else:
-        counted == "3"
     return render_template('index.html', counted=counted, count2=count3)
 
 
