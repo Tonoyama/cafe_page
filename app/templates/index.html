@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
 </head>
 <body>
+    <div id="j-title">
+        <h1>J号館１階食堂</h1>
+    </div>
     <div>
         {% if counted %}
             {% if counted > 0 %}
@@ -24,7 +27,7 @@
     </div>
     <div>
         <form method="post">
-            <h2 class="text-muted">デバイス数:{{counted}}</h2>
+            <h2 class="text-muted">推定人数:{{counted}}</h2>
         </form>
     </div>
     <div>
@@ -37,6 +40,9 @@
     </div>
     
     <!--Z号館側-->
+    <div id="z-title">
+        <h1>Z号館２階食堂</h1>
+    </div>
     <div>
         {% if counted %}
             {% if counted > 0 %}
@@ -52,7 +58,7 @@
     </div>
     <div>
         <form method="post">
-            <h2 class="text-muted">デバイス数:{{count2}}</h2>
+            <h2 class="text-muted">推定人数:{{count2}}</h2>
         </form>
     </div>
     <div>

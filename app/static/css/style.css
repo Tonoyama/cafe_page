@@ -1,5 +1,6 @@
 body{
     background: #EEEEEE;
+    text-align: center;
 }
 h1{
     text-align: center;
@@ -20,8 +21,14 @@ h1{
 }
 
 
-div{
-    text-align: center;
+#j-title {
+  background-color: #9cc147;
+  color: #fafafa;
+}
+
+#z-title {
+  background-color: #9cc147;
+  color: #fafafa;
 }
 
 details {
