@@ -24,9 +24,17 @@ def info3():
     addr3 = str(request.form['addr3'])
     return render_template('index.html', count3=count3, addr3=addr3)
 
+
 @app.route("/", methods=["GET"])
 def view():
-    return render_template('index.html', count=count, count2=count2)
+    counted = int(count)+int(count2)
+    if counted < 50:
+        counted == "1"
+    elif counted < 60:
+        counted == "2"
+    else:
+        counted == "3"
+    return render_template('index.html', counted=counted, count2=count3)
 
 
 if __name__ == "__main__":
