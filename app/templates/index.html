@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>混雑度チェッカー</title><!--titleはタブの名前(Webページのタイトル)-->
-    <!-- cssの読み込み -->
     <link rel="stylesheet" href="static/css/style.css" media="screen">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
@@ -31,16 +30,8 @@
     </div>
     <div>
         <form method="post">
-            <h2 class="text-muted">推定人数:{{counted}}</h2>
+            <h2 class="text-muted">推定人数：{{counted}}</h2>
         </form>
-    </div>
-    <div>
-        <details>
-            <summary><i class="fas fa-map-marked-alt"></i> マップ</summary>
-            <div>
-                <img src="{{ url_for('static', filename = 'images/empty.png') }}">
-            </div>
-        </details> 
     </div>
     
     <!--Z号館側-->
@@ -62,16 +53,27 @@
     </div>
     <div>
         <form method="post">
-            <h2 class="text-muted">推定人数:{{count2}}</h2>
+            <h2 class="text-muted">推定人数：{{count2}}</h2>
         </form>
     </div>
-    <div>
+    <div class="details-content">
         <details>
             <summary><i class="fas fa-map-marked-alt"></i> マップ</summary>
             <div>
-                <img src="{{ url_for('static', filename = 'images/empty.png') }}">
+                <h2>食堂の位置</h2>
+                <div class="modal-wrapper">
+                    <img src="" class="modal-image">
+               </div>
+          
+               <div class="wrapper">
+                    <img src="/static/images/map.png" class="image" data-src="/static/images/map.png">
+                    <p>画像をクリックして拡大 <i class="fas fa-search-plus"></i></p>
+               </div>
+               <h2>建物の詳細</h2>
+               <a href="https://www.osakac.ac.jp/institution/campus/neyagawa/" target="_blank" rel="noopener noreferrer">寝屋川キャンパス</a>
             </div>
         </details>
     </div>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
